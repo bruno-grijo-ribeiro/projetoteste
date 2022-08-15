@@ -1,7 +1,7 @@
 import 'package:emergencia190/src/pages/auth/controller/auth_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:emergencia190/src/pages/common_widgets/custom_text_field.dart';
-import 'package:emergencia190/src/config/app_data.dart' as appData;
+import 'package:emergencia190/src/config/app_data.dart' as app_data;
 import 'package:get/get.dart';
 
 class ProfileTab extends StatefulWidget {
@@ -37,7 +37,7 @@ class _ProfileTabState extends State<ProfileTab> {
           // Email
           CustomTextField(
             readOnly: true,
-            initialValue: appData.user.email,
+            initialValue: app_data.user.email,
             icon: Icons.email,
             label: 'Email',
           ),
@@ -45,7 +45,7 @@ class _ProfileTabState extends State<ProfileTab> {
           // Nome
           CustomTextField(
             readOnly: true,
-            initialValue: appData.user.name,
+            initialValue: app_data.user.name,
             icon: Icons.person,
             label: 'Nome',
           ),
@@ -53,7 +53,7 @@ class _ProfileTabState extends State<ProfileTab> {
           // Celular
           CustomTextField(
             readOnly: true,
-            initialValue: appData.user.phone,
+            initialValue: app_data.user.phone,
             icon: Icons.phone,
             label: 'Celular',
           ),
@@ -61,7 +61,7 @@ class _ProfileTabState extends State<ProfileTab> {
           // CPF
           CustomTextField(
             readOnly: true,
-            initialValue: appData.user.cpf,
+            initialValue: app_data.user.cpf,
             icon: Icons.file_copy,
             label: 'CPF',
             isSecret: true,

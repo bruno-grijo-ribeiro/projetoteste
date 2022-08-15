@@ -1,7 +1,7 @@
 import 'package:emergencia190/src/constants/endpoints.dart';
 import 'package:emergencia190/src/models/user_model.dart';
 import 'package:emergencia190/src/pages/auth/repository/auth_errors.dart'
-    as authErrors;
+    as auth_errors;
 import 'package:emergencia190/src/pages/auth/result/auth_result.dart';
 import 'package:emergencia190/src/services/http_manager.dart';
 
@@ -15,7 +15,7 @@ class AuthRepository {
       return AuthResult.success(user);
     }
 
-    return AuthResult.error(authErrors.authErrorsString(result['error']));
+    return AuthResult.error(auth_errors.authErrorsString(result['error']));
   }
 
   Future<AuthResult> validateToken(String token) async {
